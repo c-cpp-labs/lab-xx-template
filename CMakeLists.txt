@@ -15,8 +15,7 @@ string(
         ">"
 )
 add_library(${PROJECT_NAME} STATIC
-  # enum your files and delete this comment
-  ${CMAKE_CURRENT_SOURCE_DIR}/sources/example.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/sources/example/example.cpp
 )
 
 add_executable(demo
@@ -24,7 +23,7 @@ add_executable(demo
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC
-  "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
+  "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/sources/example>"
   "$<INSTALL_INTERFACE:include>"
 )
 

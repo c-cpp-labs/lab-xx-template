@@ -18,16 +18,16 @@ add_library(${PROJECT_NAME} STATIC
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/example/example.cpp
 )
 
-add_executable(demo
+add_executable(${PROJECT_NAME}_ex
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC
   "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/sources/example>"
-  "$<INSTALL_INTERFACE:include>"
+  "$<INSTALL_INTERFACE:/sources/example>"
 )
 
-target_link_libraries(demo ${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME}_ex ${PROJECT_NAME})
 
 include(FetchContent)
 FetchContent_Declare(

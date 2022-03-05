@@ -1,4 +1,4 @@
-### Example of creating an new lab
+### Example of creating a new lab
 
 ```Shell
 export LAB_NUMBER=xx
